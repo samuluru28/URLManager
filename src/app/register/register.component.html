@@ -1,0 +1,43 @@
+<form [formGroup] = "registrationform">   
+    <div class="row" >
+        <div class = "col-sm-4"></div>
+        <div class = "col-sm-4">
+            <div class = "row" style="height: 50%;">
+            </div>
+            <div class = "row" style="height: 20%;">
+                <div class = "col-sm-4">
+                </div>
+                <div class = "col-sm-4">
+                 <p style="font-size:20px;"><b>Registration Form</b></p>   
+                </div>
+                <div class = "col-sm-4">
+                </div>
+            </div>
+            <div class = "row">                                  
+                <label for="UserName">User Name *</label>
+                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" formControlName= "username" placeholder="Enter UserName">
+            </div>
+            <div class = "row">              
+                <label for="Password">Password *</label>
+                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" formControlName= "password" placeholder="Enter Password">
+            </div>
+            <div class = "row">              
+                <label for="Phone">Phone *</label>
+                <input type="Phone" class="form-control" id="phone" aria-describedby="phoneHelp" formControlName= "phone" placeholder="Enter PhoneNumber">
+            </div>
+            <div class = "row">              
+                <label for="Email">EmailId *</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName= "email" placeholder="Enter Email Id">
+            </div>
+            <div class = "row" style="height: 10%;"></div>
+            <div class = "row">
+                <div class = "col-sm-4"></div>         
+                <div class = "col-sm-4">
+                    <button type="button" class="btn btn-info" (click)= "Register()">Register</button>   
+                </div>
+                <div class = "col-sm-4"></div>  
+            </div>
+        </div>
+        <div class = "col-sm-4"></div>
+    </div>
+</form>
