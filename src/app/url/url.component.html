@@ -1,0 +1,87 @@
+<div class= "Container">
+    <div class='row' style= 'padding-top: 20px;'>
+        <div class='col-sm-2'>
+
+        </div>
+        <div class='col-sm-6'>
+
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            
+        </div>
+        <div class='col-sm-1'>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            
+        </div>
+        <div class='col-sm-1'>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModal">Add Url</button>
+        </div>
+        <div class='col-sm-2'>
+
+        </div>
+       
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add/Update URL</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup] = "urlform">          
+            <input type ="hidden" id="UrlId">
+              <div class="form-group">
+                <label for="UrlName">Url Name</label>
+                <input type="text" class="form-control" id="UrlName" formControlName= "urlname" aria-describedby="urlname" placeholder="Enter Url Name">
+              </div>
+              <div class="form-group">
+                <label for="UrlLink">Url Link</label>
+                <input type="text" class="form-control" id="exampleUrl"  formControlName= "urllink" aria-describedby="urllink" placeholder="Enter Url Link">
+              </div>
+              <div class="form-group">
+                <label for="Description">Description</label>
+                <textarea class="form-control" id="Description"  formControlName= "description" rows="3"></textarea>              
+              </div>
+               <div class="form-group">               
+                <input type="hidden" class="form-control" formControlName= "userid" id="UserId">
+              </div>
+              <div class="form-group">
+                <label for="ValidDate">ValidTill</label>
+                <input type="date" class="form-control" id="validtill" formControlName= "validtill" name="validtill">             
+              </div>           
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click) = "Save()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class='Container'> -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">make</th>
+        <th scope="col">model</th>
+        <th scope="col">price</th>
+        <th scope="col">manufactureDate</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of rowData">    
+        
+        <td>{{item.make}}</td>
+        <td>{{item.model}}</td>
+        <td>{{item.price |currency:'EUR':'Euros '}}</td>
+        <td>{{item.manufacturingDate | date:"MMM/dd/yy"}}</td>        
+      </tr>
+      
+    </tbody>
+  </table>
+<!-- </div> -->

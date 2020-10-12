@@ -1,43 +1,29 @@
-<form [formGroup] = "registrationform">   
-    <div class="row" >
-        <div class = "col-sm-4"></div>
-        <div class = "col-sm-4">
-            <div class = "row" style="height: 50%;">
-            </div>
-            <div class = "row" style="height: 20%;">
-                <div class = "col-sm-4">
-                </div>
-                <div class = "col-sm-4">
-                 <p style="font-size:20px;"><b>Registration Form</b></p>   
-                </div>
-                <div class = "col-sm-4">
-                </div>
-            </div>
-            <div class = "row">                                  
+<div class="container"> 
+    <div class="blackshadow">  
+        <h4 style="text-align: center;padding: bottom 40px;">Register</h4>
+        <form [formGroup] ="registrationform" autocomplete="off" class="form-horizontal">
+            <div class = "formGroup">                                  
                 <label for="UserName">User Name *</label>
-                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" formControlName= "username" placeholder="Enter UserName">
+                <input type="text" class="form-control"  id="username" aria-describedby="usernameHelp" formControlName= "username" placeholder="Enter UserName">
             </div>
-            <div class = "row">              
-                <label for="Password">Password *</label>
+            <div class = "formGroup">              
+                <label for="Password" style="margin-top: 10px;">Password *</label>
                 <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" formControlName= "password" placeholder="Enter Password">
             </div>
-            <div class = "row">              
-                <label for="Phone">Phone *</label>
+            <div class = "formGroup">              
+                <label for="Phone" style="margin-top: 10px;">Phone *</label>
                 <input type="Phone" class="form-control" id="phone" aria-describedby="phoneHelp" formControlName= "phone" placeholder="Enter PhoneNumber">
             </div>
-            <div class = "row">              
-                <label for="Email">EmailId *</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName= "email" placeholder="Enter Email Id">
-            </div>
-            <div class = "row" style="height: 10%;"></div>
-            <div class = "row">
-                <div class = "col-sm-4"></div>         
-                <div class = "col-sm-4">
-                    <button type="button" class="btn btn-info" (click)= "Register()">Register</button>   
-                </div>
-                <div class = "col-sm-4"></div>  
-            </div>
-        </div>
-        <div class = "col-sm-4"></div>
+            <div class = "formGroup">              
+                <label for="Email" style="margin-top: 10px;">EmailId *</label>
+                <input type="email" class="form-control" id="email"  aria-describedby="emailHelp" formControlName= "email" placeholder="Enter Email Id">
+            </div>            
+           
+                <button  class= "btn btn-outline-success my-2 my-sm-0 btn-block"  (click)= "Register()">Register</button>
+           
+
+            <!-- <button type="submit" class= "btn btn-outline-success my-2 my-sm-0 btn-block"   (click)= "Register()">Register</button> -->
+                   
+        </form>
     </div>
-</form>
+</div>

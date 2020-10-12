@@ -11,6 +11,7 @@ import { PermisionsComponent } from './permisions/permisions.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
+import { UrlComponent } from './url/url.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Routes, RouterModule } from '@angular/router';
     SettingsComponent,
     PermisionsComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UrlComponent
   ],
   imports: [
     BrowserModule,
